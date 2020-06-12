@@ -79,7 +79,7 @@ async function verifyToken(authHeader: string): Promise<JwtPayload> {
   return jtoke
 }
 
-//TODO-GS Handle error
+//Access the Auth0 Endpoint service to obtain certificate
 async function getAuth0_JSON_WebKeys():Promise<string> {
   console.log("getCert")
   const https = require('https')
@@ -97,6 +97,7 @@ async function getAuth0_JSON_WebKeys():Promise<string> {
   });
 }
 
+//Extract user token from header
 function getToken(authHeader: string): string {
   console.log("getToken")
   if (!authHeader) throw new Error('No authentication header')
@@ -110,11 +111,12 @@ function getToken(authHeader: string): string {
   return token
 }
 
+//Use the kid extracted from the token to identify the appropriate
+//certificate key from the data returned from Auth0
 function extractCertFromKeys(kid: string, jwksdata: string): string{
   console.log("extractCertFromKeys")
   let cert: string = null 
-  //jwksKeys.keys[0].x5c[0]
-  /* Example
+  /* Example Auth0 response
   keys: [
     {
       alg: 'RS256',
@@ -150,6 +152,7 @@ function extractCertFromKeys(kid: string, jwksdata: string): string{
   return cert
 }
 
+//Format the cert into PEM
 function certToPEM(cert: string): string {
   cert = cert.match(/.{1,64}/g).join('\n');
   cert = `-----BEGIN CERTIFICATE-----\n${cert}\n-----END CERTIFICATE-----\n`;

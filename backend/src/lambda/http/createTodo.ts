@@ -1,48 +1,55 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult, APIGatewayProxyHandler } from 'aws-lambda'
 import 'source-map-support/register'
-import { CreateTodoRequest } from '../../requests/CreateTodoRequest'
-import { TodoItem } from '../../models/TodoItem'
-import * as AWS from 'aws-sdk'
+
+import { CreateTodoRequest } from '../../requests/CreateTodoRequest';
 import { createLogger } from '../../utils/logger'
 const logger = createLogger('createtodo')
-
-import * as uuid from 'uuid'
+import { addTODO } from '../../api/db_access'
+import { TodoItem } from '../../models/TodoItem';
 import { getUserId } from '../utils'
-
-const docClient = new AWS.DynamoDB.DocumentClient()
-const todosTable = process.env.TODOS_TABLE
 
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   console.log('createTodo fxn')
   logger.info('createTodo Event: ', event)
-
-  const userId = getUserId(event)
-  console.log('UserId: ', userId)
-
-  // TODO: Implement creating a new TODO item
-  const newTodo: CreateTodoRequest = JSON.parse(event.body)
-  const item: TodoItem = {
-    todoId: uuid.v4(),
-    userId: userId,
-    createdAt: new Date().toISOString(),
-    name: newTodo.name,
-    dueDate: newTodo.dueDate,
-    done: false
-  }  
-  logger.info(item)
-
-  await docClient.put({
-      TableName: todosTable,
-      Item: item
-  }).promise()
+  try {
+    const userId = getUserId(event)
+    console.log('UserId: ', userId)
   
-  console.log("Success 201")
-  return {
-    statusCode: 201,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true
-    },
-    body: JSON.stringify({ item })
+    //Validate input
+    const todoData: CreateTodoRequest = JSON.parse(event.body)
+    if (todoData.name == null || todoData.name == undefined || todoData.name.length == 0) { 
+      throw new Error("Missing required data TODO name")
+    }
+    else if (todoData.dueDate == null || todoData.dueDate == undefined || todoData.dueDate.length == 0) { 
+      throw new Error("Missing required data TODO dueDate")
+    }
+
+    //Add new todo
+    const item: TodoItem = await addTODO(userId, event.body)
+  
+    console.log("Success 201")
+    return {
+      statusCode: 201,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+      },
+      body: JSON.stringify({ item })
+    }
+  } catch(e) {
+    logger.error('Exception:', e.message)
+    var codeStatus = 500 //Unexpected server error default
+    if (e.message.includes('Missing required data'))
+        codeStatus = 400 //Bad Request
+    return {
+      statusCode: codeStatus,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true
+      },
+      body: e.message
+    }
   }
+  
 }
+

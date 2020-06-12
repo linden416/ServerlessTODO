@@ -1,0 +1,230 @@
+timestamp,message
+1591919598388,"START RequestId: ad344f73-3b4b-4983-83f6-a8c266299fd0 Version: $LATEST
+"
+1591919598390,"2020-06-11T23:53:18.390Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	getTodos lambda fxn
+"
+1591919598392,"{""name"":""gettodos"",""resource"":""/todos"",""path"":""/todos"",""httpMethod"":""GET"",""headers"":{""Accept"":""application/json, text/plain, */*"",""Accept-Encoding"":""gzip, deflate, br"",""Accept-Language"":""en-US,en;q=0.9"",""Authorization"":""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q"",""CloudFront-Forwarded-Proto"":""https"",""CloudFront-Is-Desktop-Viewer"":""true"",""CloudFront-Is-Mobile-Viewer"":""false"",""CloudFront-Is-SmartTV-Viewer"":""false"",""CloudFront-Is-Tablet-Viewer"":""false"",""CloudFront-Viewer-Country"":""US"",""Host"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""origin"":""http://localhost:3000"",""Referer"":""http://localhost:3000/"",""sec-fetch-dest"":""empty"",""sec-fetch-mode"":""cors"",""sec-fetch-site"":""cross-site"",""User-Agent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"",""Via"":""2.0 6a8454479275f0c3d09d4129ba690f51.cloudfront.net (CloudFront)"",""X-Amz-Cf-Id"":""gFsFffzTtHE0u8eVNYjX0xn5JOLl3lUYIBloAQqY-c6SG4oqUvb4-A=="",""X-Amzn-Trace-Id"":""Root=1-5ee2c3ec-0d35d578d1486410f3b142c8"",""X-Forwarded-For"":""71.156.79.242, 130.176.71.162"",""X-Forwarded-Port"":""443"",""X-Forwarded-Proto"":""https""},""multiValueHeaders"":{""Accept"":[""application/json, text/plain, */*""],""Accept-Encoding"":[""gzip, deflate, br""],""Accept-Language"":[""en-US,en;q=0.9""],""Authorization"":[""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q""],""CloudFront-Forwarded-Proto"":[""https""],""CloudFront-Is-Desktop-Viewer"":[""true""],""CloudFront-Is-Mobile-Viewer"":[""false""],""CloudFront-Is-SmartTV-Viewer"":[""false""],""CloudFront-Is-Tablet-Viewer"":[""false""],""CloudFront-Viewer-Country"":[""US""],""Host"":[""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com""],""origin"":[""http://localhost:3000""],""Referer"":[""http://localhost:3000/""],""sec-fetch-dest"":[""empty""],""sec-fetch-mode"":[""cors""],""sec-fetch-site"":[""cross-site""],""User-Agent"":[""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36""],""Via"":[""2.0 6a8454479275f0c3d09d4129ba690f51.cloudfront.net (CloudFront)""],""X-Amz-Cf-Id"":[""gFsFffzTtHE0u8eVNYjX0xn5JOLl3lUYIBloAQqY-c6SG4oqUvb4-A==""],""X-Amzn-Trace-Id"":[""Root=1-5ee2c3ec-0d35d578d1486410f3b142c8""],""X-Forwarded-For"":[""71.156.79.242, 130.176.71.162""],""X-Forwarded-Port"":[""443""],""X-Forwarded-Proto"":[""https""]},""queryStringParameters"":null,""multiValueQueryStringParameters"":null,""pathParameters"":null,""stageVariables"":null,""requestContext"":{""resourceId"":""pbez5r"",""authorizer"":{""principalId"":""google-oauth2|112163769770696026871"",""integrationLatency"":717},""resourcePath"":""/todos"",""httpMethod"":""GET"",""extendedRequestId"":""N_ONAE2GoAMFyLg="",""requestTime"":""11/Jun/2020:23:53:16 +0000"",""path"":""/dev/todos"",""accountId"":""234180911028"",""protocol"":""HTTP/1.1"",""stage"":""dev"",""domainPrefix"":""1qkgpbpdnf"",""requestTimeEpoch"":1591919596788,""requestId"":""a0df40d8-0fe1-4291-bfe6-b6919608faa0"",""identity"":{""cognitoIdentityPoolId"":null,""accountId"":null,""cognitoIdentityId"":null,""caller"":null,""sourceIp"":""71.156.79.242"",""principalOrgId"":null,""accessKey"":null,""cognitoAuthenticationType"":null,""cognitoAuthenticationProvider"":null,""userArn"":null,""userAgent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"",""user"":null},""domainName"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""apiId"":""1qkgpbpdnf""},""body"":null,""isBase64Encoded"":false,""level"":""info"",""message"":""GetTodos Event: ""}
+"
+1591919598393,"2020-06-11T23:53:18.393Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	UserId:  google-oauth2|112163769770696026871
+"
+1591919598393,"2020-06-11T23:53:18.393Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	db_access.getTODOs
+"
+1591919598393,"2020-06-11T23:53:18.393Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	Query Todos filter by userId:  google-oauth2|112163769770696026871
+"
+1591919598486,"2020-06-11T23:53:18.486Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	ERROR	(node:7) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+"
+1591919598608,"2020-06-11T23:53:18.608Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	Get TODOs:  [
+  {
+    todoId: '22911a4d-02e5-4c9b-8951-8e7d7ed527ad',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T21:53:05.308Z',
+    name: 'Water the plants',
+    done: true
+  },
+  {
+    todoId: '43a3580f-53d2-4f09-a175-a269b89ef8df',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:18:07.307Z',
+    name: 'Almost done',
+    done: false
+  },
+  {
+    todoId: '7657e023-9429-44dc-a712-a6a9838791f6',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T17:20:44.132Z',
+    name: 'Save the world',
+    done: true
+  },
+  {
+    todoId: 'e44c8fc4-633d-4b10-bdef-8bf6a64e0885',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T15:22:13.018Z',
+    name: 'Float for a while',
+    done: false
+  }
+]
+"
+1591919598608,"{""message"":[{""todoId"":""22911a4d-02e5-4c9b-8951-8e7d7ed527ad"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T21:53:05.308Z"",""name"":""Water the plants"",""done"":true},{""todoId"":""43a3580f-53d2-4f09-a175-a269b89ef8df"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:18:07.307Z"",""name"":""Almost done"",""done"":false},{""todoId"":""7657e023-9429-44dc-a712-a6a9838791f6"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T17:20:44.132Z"",""name"":""Save the world"",""done"":true},{""todoId"":""e44c8fc4-633d-4b10-bdef-8bf6a64e0885"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T15:22:13.018Z"",""name"":""Float for a while"",""done"":false}],""level"":""info"",""name"":""gettodos""}
+"
+1591919598609,"2020-06-11T23:53:18.608Z	ad344f73-3b4b-4983-83f6-a8c266299fd0	INFO	Success 200
+"
+1591919598610,"END RequestId: ad344f73-3b4b-4983-83f6-a8c266299fd0
+"
+1591919598610,"REPORT RequestId: ad344f73-3b4b-4983-83f6-a8c266299fd0	Duration: 222.15 ms	Billed Duration: 300 ms	Memory Size: 1024 MB	Max Memory Used: 150 MB	Init Duration: 707.89 ms	
+"
+1591919670040,"START RequestId: cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38 Version: $LATEST
+"
+1591919670043,"2020-06-11T23:54:30.043Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	getTodos lambda fxn
+"
+1591919670044,"{""name"":""gettodos"",""resource"":""/todos"",""path"":""/todos"",""httpMethod"":""GET"",""headers"":{""Accept"":""application/json, text/plain, */*"",""Accept-Encoding"":""gzip, deflate, br"",""Accept-Language"":""en-US,en;q=0.9"",""Authorization"":""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q"",""CloudFront-Forwarded-Proto"":""https"",""CloudFront-Is-Desktop-Viewer"":""true"",""CloudFront-Is-Mobile-Viewer"":""false"",""CloudFront-Is-SmartTV-Viewer"":""false"",""CloudFront-Is-Tablet-Viewer"":""false"",""CloudFront-Viewer-Country"":""US"",""Host"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""origin"":""http://localhost:3000"",""Referer"":""http://localhost:3000/"",""sec-fetch-dest"":""empty"",""sec-fetch-mode"":""cors"",""sec-fetch-site"":""cross-site"",""User-Agent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"",""Via"":""2.0 6a8454479275f0c3d09d4129ba690f51.cloudfront.net (CloudFront)"",""X-Amz-Cf-Id"":""WCjQQvrCOrOBZSsyvqXm7wqYBdXmDTs7zP7kYxVHzaTuI5kclbz0PA=="",""X-Amzn-Trace-Id"":""Root=1-5ee2c436-fbf5ea826cbeee1b07970bc6"",""X-Forwarded-For"":""71.156.79.242, 130.176.71.155"",""X-Forwarded-Port"":""443"",""X-Forwarded-Proto"":""https""},""multiValueHeaders"":{""Accept"":[""application/json, text/plain, */*""],""Accept-Encoding"":[""gzip, deflate, br""],""Accept-Language"":[""en-US,en;q=0.9""],""Authorization"":[""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q""],""CloudFront-Forwarded-Proto"":[""https""],""CloudFront-Is-Desktop-Viewer"":[""true""],""CloudFront-Is-Mobile-Viewer"":[""false""],""CloudFront-Is-SmartTV-Viewer"":[""false""],""CloudFront-Is-Tablet-Viewer"":[""false""],""CloudFront-Viewer-Country"":[""US""],""Host"":[""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com""],""origin"":[""http://localhost:3000""],""Referer"":[""http://localhost:3000/""],""sec-fetch-dest"":[""empty""],""sec-fetch-mode"":[""cors""],""sec-fetch-site"":[""cross-site""],""User-Agent"":[""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36""],""Via"":[""2.0 6a8454479275f0c3d09d4129ba690f51.cloudfront.net (CloudFront)""],""X-Amz-Cf-Id"":[""WCjQQvrCOrOBZSsyvqXm7wqYBdXmDTs7zP7kYxVHzaTuI5kclbz0PA==""],""X-Amzn-Trace-Id"":[""Root=1-5ee2c436-fbf5ea826cbeee1b07970bc6""],""X-Forwarded-For"":[""71.156.79.242, 130.176.71.155""],""X-Forwarded-Port"":[""443""],""X-Forwarded-Proto"":[""https""]},""queryStringParameters"":null,""multiValueQueryStringParameters"":null,""pathParameters"":null,""stageVariables"":null,""requestContext"":{""resourceId"":""pbez5r"",""authorizer"":{""principalId"":""google-oauth2|112163769770696026871"",""integrationLatency"":0},""resourcePath"":""/todos"",""httpMethod"":""GET"",""extendedRequestId"":""N_OYdGSAIAMF4pw="",""requestTime"":""11/Jun/2020:23:54:30 +0000"",""path"":""/dev/todos"",""accountId"":""234180911028"",""protocol"":""HTTP/1.1"",""stage"":""dev"",""domainPrefix"":""1qkgpbpdnf"",""requestTimeEpoch"":1591919670019,""requestId"":""e197fc46-9d88-4c36-bca0-cdbd7e97802f"",""identity"":{""cognitoIdentityPoolId"":null,""accountId"":null,""cognitoIdentityId"":null,""caller"":null,""sourceIp"":""71.156.79.242"",""principalOrgId"":null,""accessKey"":null,""cognitoAuthenticationType"":null,""cognitoAuthenticationProvider"":null,""userArn"":null,""userAgent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"",""user"":null},""domainName"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""apiId"":""1qkgpbpdnf""},""body"":null,""isBase64Encoded"":false,""level"":""info"",""message"":""GetTodos Event: ""}
+"
+1591919670044,"2020-06-11T23:54:30.044Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	UserId:  google-oauth2|112163769770696026871
+"
+1591919670044,"2020-06-11T23:54:30.044Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	db_access.getTODOs
+"
+1591919670044,"2020-06-11T23:54:30.044Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	Query Todos filter by userId:  google-oauth2|112163769770696026871
+"
+1591919670141,"2020-06-11T23:54:30.141Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	Get TODOs:  [
+  {
+    todoId: '22911a4d-02e5-4c9b-8951-8e7d7ed527ad',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T21:53:05.308Z',
+    name: 'Water the plants',
+    done: true
+  },
+  {
+    todoId: '43a3580f-53d2-4f09-a175-a269b89ef8df',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:18:07.307Z',
+    name: 'Almost done',
+    done: false
+  },
+  {
+    todoId: '7657e023-9429-44dc-a712-a6a9838791f6',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T17:20:44.132Z',
+    name: 'Save the world',
+    done: true
+  },
+  {
+    todoId: 'e44c8fc4-633d-4b10-bdef-8bf6a64e0885',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T15:22:13.018Z',
+    name: 'Float for a while',
+    done: false
+  },
+  {
+    todoId: 'ec5511e2-0f56-46a7-b2ea-6e7c941ca37d',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/58f0510f-5399-493c-bff2-9745b782ff95',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:54:00.771Z',
+    name: 'Visit NYC',
+    done: false
+  }
+]
+"
+1591919670142,"{""message"":[{""todoId"":""22911a4d-02e5-4c9b-8951-8e7d7ed527ad"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T21:53:05.308Z"",""name"":""Water the plants"",""done"":true},{""todoId"":""43a3580f-53d2-4f09-a175-a269b89ef8df"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:18:07.307Z"",""name"":""Almost done"",""done"":false},{""todoId"":""7657e023-9429-44dc-a712-a6a9838791f6"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T17:20:44.132Z"",""name"":""Save the world"",""done"":true},{""todoId"":""e44c8fc4-633d-4b10-bdef-8bf6a64e0885"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T15:22:13.018Z"",""name"":""Float for a while"",""done"":false},{""todoId"":""ec5511e2-0f56-46a7-b2ea-6e7c941ca37d"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/58f0510f-5399-493c-bff2-9745b782ff95"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:54:00.771Z"",""name"":""Visit NYC"",""done"":false}],""level"":""info"",""name"":""gettodos""}
+"
+1591919670142,"2020-06-11T23:54:30.142Z	cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	INFO	Success 200
+"
+1591919670143,"END RequestId: cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38
+"
+1591919670143,"REPORT RequestId: cefcc84a-52bb-4cfb-8ab6-3d3a578c2a38	Duration: 99.95 ms	Billed Duration: 100 ms	Memory Size: 1024 MB	Max Memory Used: 150 MB	
+"
+1591920083812,"START RequestId: c5ae2068-1950-4cd2-adbe-f405671e33b4 Version: $LATEST
+"
+1591920083816,"2020-06-12T00:01:23.816Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	getTodos lambda fxn
+"
+1591920083817,"{""name"":""gettodos"",""resource"":""/todos"",""path"":""/todos"",""httpMethod"":""GET"",""headers"":{""Accept"":""*/*"",""Accept-Encoding"":""gzip, deflate, br"",""Authorization"":""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q"",""CloudFront-Forwarded-Proto"":""https"",""CloudFront-Is-Desktop-Viewer"":""true"",""CloudFront-Is-Mobile-Viewer"":""false"",""CloudFront-Is-SmartTV-Viewer"":""false"",""CloudFront-Is-Tablet-Viewer"":""false"",""CloudFront-Viewer-Country"":""US"",""Host"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""Postman-Token"":""01b114db-381e-46b7-81f4-917487cad20c"",""User-Agent"":""PostmanRuntime/7.24.1"",""Via"":""1.1 f4710a63efd91d46133023148eb02e4e.cloudfront.net (CloudFront)"",""X-Amz-Cf-Id"":""UcDkOXcZtmli2JRqLAjI1S_9TpUNw_gYSEvUdeKkUsZ4mGU9w9BtzQ=="",""X-Amzn-Trace-Id"":""Root=1-5ee2c5d3-7df4801297326720d8670f62"",""X-Forwarded-For"":""71.156.79.242, 130.176.71.150"",""X-Forwarded-Port"":""443"",""X-Forwarded-Proto"":""https""},""multiValueHeaders"":{""Accept"":[""*/*""],""Accept-Encoding"":[""gzip, deflate, br""],""Authorization"":[""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTIxNjM3Njk3NzA2OTYwMjY4NzEiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkxOTU5NCwiZXhwIjoxNTkxOTU1NTk0LCJhdF9oYXNoIjoiZjRiRjFfaWR6ZTV3WFpjN2JnMGh6USIsIm5vbmNlIjoicEx2MkdQME8yYXB2U2NULlVrMll3Q2xRcTVRR3k4SDEifQ.lJIXabHRhg52DF32bgmY4B_M14j0s7nJSMG8F68RgO7zvvcvgISJumsljLG0zvqxtUhaL05etZTrAuicdY32JV95inTRgzWzPr3uVO_ZDr6KRMiauvB0atDSGKPEWwqZQ1WaoLZaRh-G9CqIZm3E7AQh3aLZWPY-fv537vqhhTAcmJR7MC4JEyZKPKWMgbOg8Vyh4l1R7Fy2QIakoZaSbHjryIUXg1Zri51QvRR6uBmZrbzEOznDfShPArUOtBDKRt-Kk5osSlcDI3064Hf7g7oI_KCKB2LIvV1rxkpcpaW8o6oeh68L2Jpz8-FWfy2DyCpGdC7T-bPRtF530ZUw5Q""],""CloudFront-Forwarded-Proto"":[""https""],""CloudFront-Is-Desktop-Viewer"":[""true""],""CloudFront-Is-Mobile-Viewer"":[""false""],""CloudFront-Is-SmartTV-Viewer"":[""false""],""CloudFront-Is-Tablet-Viewer"":[""false""],""CloudFront-Viewer-Country"":[""US""],""Host"":[""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com""],""Postman-Token"":[""01b114db-381e-46b7-81f4-917487cad20c""],""User-Agent"":[""PostmanRuntime/7.24.1""],""Via"":[""1.1 f4710a63efd91d46133023148eb02e4e.cloudfront.net (CloudFront)""],""X-Amz-Cf-Id"":[""UcDkOXcZtmli2JRqLAjI1S_9TpUNw_gYSEvUdeKkUsZ4mGU9w9BtzQ==""],""X-Amzn-Trace-Id"":[""Root=1-5ee2c5d3-7df4801297326720d8670f62""],""X-Forwarded-For"":[""71.156.79.242, 130.176.71.150""],""X-Forwarded-Port"":[""443""],""X-Forwarded-Proto"":[""https""]},""queryStringParameters"":null,""multiValueQueryStringParameters"":null,""pathParameters"":null,""stageVariables"":null,""requestContext"":{""resourceId"":""pbez5r"",""authorizer"":{""principalId"":""google-oauth2|112163769770696026871"",""integrationLatency"":0},""resourcePath"":""/todos"",""httpMethod"":""GET"",""extendedRequestId"":""N_PZGHSyIAMFwZw="",""requestTime"":""12/Jun/2020:00:01:23 +0000"",""path"":""/dev/todos"",""accountId"":""234180911028"",""protocol"":""HTTP/1.1"",""stage"":""dev"",""domainPrefix"":""1qkgpbpdnf"",""requestTimeEpoch"":1591920083785,""requestId"":""b5d5696f-8f26-46ee-b104-50caf0f879b4"",""identity"":{""cognitoIdentityPoolId"":null,""accountId"":null,""cognitoIdentityId"":null,""caller"":null,""sourceIp"":""71.156.79.242"",""principalOrgId"":null,""accessKey"":null,""cognitoAuthenticationType"":null,""cognitoAuthenticationProvider"":null,""userArn"":null,""userAgent"":""PostmanRuntime/7.24.1"",""user"":null},""domainName"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""apiId"":""1qkgpbpdnf""},""body"":null,""isBase64Encoded"":false,""level"":""info"",""message"":""GetTodos Event: ""}
+"
+1591920083817,"2020-06-12T00:01:23.817Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	UserId:  google-oauth2|112163769770696026871
+"
+1591920083817,"2020-06-12T00:01:23.817Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	db_access.getTODOs
+"
+1591920083817,"2020-06-12T00:01:23.817Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	Query Todos filter by userId:  google-oauth2|112163769770696026871
+"
+1591920083890,"2020-06-12T00:01:23.890Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	Get TODOs:  [
+  {
+    todoId: '22911a4d-02e5-4c9b-8951-8e7d7ed527ad',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T21:53:05.308Z',
+    name: 'Water the plants',
+    done: true
+  },
+  {
+    todoId: '43a3580f-53d2-4f09-a175-a269b89ef8df',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:18:07.307Z',
+    name: 'Almost done',
+    done: false
+  },
+  {
+    todoId: '7657e023-9429-44dc-a712-a6a9838791f6',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e',
+    userId: 'google-oauth2|112163769770696026871',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T17:20:44.132Z',
+    name: 'Save the world',
+    done: true
+  },
+  {
+    todoId: 'e44c8fc4-633d-4b10-bdef-8bf6a64e0885',
+    userId: 'google-oauth2|112163769770696026871',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T15:22:13.018Z',
+    name: 'Float for a while',
+    done: false
+  }
+]
+"
+1591920083891,"{""message"":[{""todoId"":""22911a4d-02e5-4c9b-8951-8e7d7ed527ad"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/08349b33-5f7c-49b1-af40-75dd370d609b"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T21:53:05.308Z"",""name"":""Water the plants"",""done"":true},{""todoId"":""43a3580f-53d2-4f09-a175-a269b89ef8df"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/2aab5c90-b749-4bae-876c-a623fc818028"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:18:07.307Z"",""name"":""Almost done"",""done"":false},{""todoId"":""7657e023-9429-44dc-a712-a6a9838791f6"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/e7d9dc83-30a5-4d47-8f06-88ea9d51310e"",""userId"":""google-oauth2|112163769770696026871"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T17:20:44.132Z"",""name"":""Save the world"",""done"":true},{""todoId"":""e44c8fc4-633d-4b10-bdef-8bf6a64e0885"",""userId"":""google-oauth2|112163769770696026871"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/dd3696ad-e389-4fe5-91c8-c2f48e17ed34"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T15:22:13.018Z"",""name"":""Float for a while"",""done"":false}],""level"":""info"",""name"":""gettodos""}
+"
+1591920083891,"2020-06-12T00:01:23.891Z	c5ae2068-1950-4cd2-adbe-f405671e33b4	INFO	Success 200
+"
+1591920083892,"END RequestId: c5ae2068-1950-4cd2-adbe-f405671e33b4
+"
+1591920083892,"REPORT RequestId: c5ae2068-1950-4cd2-adbe-f405671e33b4	Duration: 76.12 ms	Billed Duration: 100 ms	Memory Size: 1024 MB	Max Memory Used: 150 MB	
+"
+1591920295352,"START RequestId: 1af3d6a0-dd66-41ab-b34b-35b9316ea8b5 Version: $LATEST
+"
+1591920295356,"2020-06-12T00:04:55.356Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	getTodos lambda fxn
+"
+1591920295356,"{""name"":""gettodos"",""resource"":""/todos"",""path"":""/todos"",""httpMethod"":""GET"",""headers"":{""Accept"":""application/json, text/plain, */*"",""Accept-Encoding"":""br, gzip, deflate"",""Accept-Language"":""en-us"",""Authorization"":""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDg4NjE1ODA2NDU4MjU0NTczMzgiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkyMDI5MywiZXhwIjoxNTkxOTU2MjkzLCJhdF9oYXNoIjoiaFY0QTVjNlRMWE4xYmpLcHBjZU1JUSIsIm5vbmNlIjoiZkFnQWZVMGtScjlRY1pCTFNnLk9yT1I4SFBudWtqLUQifQ.cq4XhcT9x_AHGcM8JW2AyGhLCwJ5xIuQTyoaPxD48Mr0b-8IpfoGA3pK2bNI7k20oyKShFiP0jhdjVs6m8QYELQ0G6NSQEy1MECyQ-cmBghosWgoAZHSr6SLtI38PpkFUYhAjsncq1YC02D-gERqOzEgUcuIi3mSRxXvYDBWmdV1FIkdDxRWqSDLnPockrlHW--XTOxH1i7iXEEsvmLg10j3jAn9lzBrCqxed-0QYDzSgh1Evx5ynXS_wccrO0QHageG5owLWp_gYae-7Lf7zVcx0Qkid7VGAHn0gbcjv0y4JUkTpuqUb1DK5t4O3En4biX7RfBHLIMK_G-ZTAW4jA"",""CloudFront-Forwarded-Proto"":""https"",""CloudFront-Is-Desktop-Viewer"":""true"",""CloudFront-Is-Mobile-Viewer"":""false"",""CloudFront-Is-SmartTV-Viewer"":""false"",""CloudFront-Is-Tablet-Viewer"":""false"",""CloudFront-Viewer-Country"":""US"",""Host"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""origin"":""http://localhost:3000"",""Referer"":""http://localhost:3000/"",""User-Agent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15"",""Via"":""2.0 d25cb96b3c4f731e4d2f3764ef7262af.cloudfront.net (CloudFront)"",""X-Amz-Cf-Id"":""DejZXFBv2vEmw6BERR3DQ-r5b9uk8aG3VjrGINVN8-_AQn3WvAkXGw=="",""X-Amzn-Trace-Id"":""Root=1-5ee2c6a7-b8900b37110dde212831d298"",""X-Forwarded-For"":""71.156.79.242, 130.176.71.153"",""X-Forwarded-Port"":""443"",""X-Forwarded-Proto"":""https""},""multiValueHeaders"":{""Accept"":[""application/json, text/plain, */*""],""Accept-Encoding"":[""br, gzip, deflate""],""Accept-Language"":[""en-us""],""Authorization"":[""Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkkxaF9ETVAwX1A4QjBXb1VsQnBjSCJ9.eyJpc3MiOiJodHRwczovL2Rldi13bWJ4ZzZ5MC5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDg4NjE1ODA2NDU4MjU0NTczMzgiLCJhdWQiOiJyY2lYYUxFUWdaTVlWTXNRNDlXcUNzMGRzbTFvWDFPTyIsImlhdCI6MTU5MTkyMDI5MywiZXhwIjoxNTkxOTU2MjkzLCJhdF9oYXNoIjoiaFY0QTVjNlRMWE4xYmpLcHBjZU1JUSIsIm5vbmNlIjoiZkFnQWZVMGtScjlRY1pCTFNnLk9yT1I4SFBudWtqLUQifQ.cq4XhcT9x_AHGcM8JW2AyGhLCwJ5xIuQTyoaPxD48Mr0b-8IpfoGA3pK2bNI7k20oyKShFiP0jhdjVs6m8QYELQ0G6NSQEy1MECyQ-cmBghosWgoAZHSr6SLtI38PpkFUYhAjsncq1YC02D-gERqOzEgUcuIi3mSRxXvYDBWmdV1FIkdDxRWqSDLnPockrlHW--XTOxH1i7iXEEsvmLg10j3jAn9lzBrCqxed-0QYDzSgh1Evx5ynXS_wccrO0QHageG5owLWp_gYae-7Lf7zVcx0Qkid7VGAHn0gbcjv0y4JUkTpuqUb1DK5t4O3En4biX7RfBHLIMK_G-ZTAW4jA""],""CloudFront-Forwarded-Proto"":[""https""],""CloudFront-Is-Desktop-Viewer"":[""true""],""CloudFront-Is-Mobile-Viewer"":[""false""],""CloudFront-Is-SmartTV-Viewer"":[""false""],""CloudFront-Is-Tablet-Viewer"":[""false""],""CloudFront-Viewer-Country"":[""US""],""Host"":[""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com""],""origin"":[""http://localhost:3000""],""Referer"":[""http://localhost:3000/""],""User-Agent"":[""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15""],""Via"":[""2.0 d25cb96b3c4f731e4d2f3764ef7262af.cloudfront.net (CloudFront)""],""X-Amz-Cf-Id"":[""DejZXFBv2vEmw6BERR3DQ-r5b9uk8aG3VjrGINVN8-_AQn3WvAkXGw==""],""X-Amzn-Trace-Id"":[""Root=1-5ee2c6a7-b8900b37110dde212831d298""],""X-Forwarded-For"":[""71.156.79.242, 130.176.71.153""],""X-Forwarded-Port"":[""443""],""X-Forwarded-Proto"":[""https""]},""queryStringParameters"":null,""multiValueQueryStringParameters"":null,""pathParameters"":null,""stageVariables"":null,""requestContext"":{""resourceId"":""pbez5r"",""authorizer"":{""principalId"":""google-oauth2|108861580645825457338"",""integrationLatency"":297},""resourcePath"":""/todos"",""httpMethod"":""GET"",""extendedRequestId"":""N_P6HFUOoAMFTxw="",""requestTime"":""12/Jun/2020:00:04:55 +0000"",""path"":""/dev/todos"",""accountId"":""234180911028"",""protocol"":""HTTP/1.1"",""stage"":""dev"",""domainPrefix"":""1qkgpbpdnf"",""requestTimeEpoch"":1591920295026,""requestId"":""020e13bc-256c-44dd-9738-ba856c399881"",""identity"":{""cognitoIdentityPoolId"":null,""accountId"":null,""cognitoIdentityId"":null,""caller"":null,""sourceIp"":""71.156.79.242"",""principalOrgId"":null,""accessKey"":null,""cognitoAuthenticationType"":null,""cognitoAuthenticationProvider"":null,""userArn"":null,""userAgent"":""Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Safari/605.1.15"",""user"":null},""domainName"":""1qkgpbpdnf.execute-api.us-east-1.amazonaws.com"",""apiId"":""1qkgpbpdnf""},""body"":null,""isBase64Encoded"":false,""level"":""info"",""message"":""GetTodos Event: ""}
+"
+1591920295357,"2020-06-12T00:04:55.356Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	UserId:  google-oauth2|108861580645825457338
+"
+1591920295357,"2020-06-12T00:04:55.356Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	db_access.getTODOs
+"
+1591920295357,"2020-06-12T00:04:55.356Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	Query Todos filter by userId:  google-oauth2|108861580645825457338
+"
+1591920295384,"2020-06-12T00:04:55.384Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	Get TODOs:  [
+  {
+    todoId: '5ccfce1a-83c0-4b37-b48d-c0378db8c096',
+    userId: 'google-oauth2|108861580645825457338',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/40743fe1-1e64-4054-af4a-3b3e8951316d',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:20:06.322Z',
+    name: 'Play some guitar!',
+    done: false
+  },
+  {
+    todoId: 'de43b001-e9ec-4f38-9275-631813a39f2c',
+    userId: 'google-oauth2|108861580645825457338',
+    attachmentUrl: 'https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/9445b5ea-45aa-4f5b-a1a6-5dc6295946b3',
+    dueDate: '2020-06-18',
+    createdAt: '2020-06-11T23:20:35.930Z',
+    name: 'Play some golf!!',
+    done: false
+  }
+]
+"
+1591920295384,"{""message"":[{""todoId"":""5ccfce1a-83c0-4b37-b48d-c0378db8c096"",""userId"":""google-oauth2|108861580645825457338"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/40743fe1-1e64-4054-af4a-3b3e8951316d"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:20:06.322Z"",""name"":""Play some guitar!"",""done"":false},{""todoId"":""de43b001-e9ec-4f38-9275-631813a39f2c"",""userId"":""google-oauth2|108861580645825457338"",""attachmentUrl"":""https://serverless-todo-images-s3bucket-dev.s3.amazonaws.com/9445b5ea-45aa-4f5b-a1a6-5dc6295946b3"",""dueDate"":""2020-06-18"",""createdAt"":""2020-06-11T23:20:35.930Z"",""name"":""Play some golf!!"",""done"":false}],""level"":""info"",""name"":""gettodos""}
+"
+1591920295384,"2020-06-12T00:04:55.384Z	1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	INFO	Success 200
+"
+1591920295385,"END RequestId: 1af3d6a0-dd66-41ab-b34b-35b9316ea8b5
+"
+1591920295385,"REPORT RequestId: 1af3d6a0-dd66-41ab-b34b-35b9316ea8b5	Duration: 30.16 ms	Billed Duration: 100 ms	Memory Size: 1024 MB	Max Memory Used: 150 MB	
+"

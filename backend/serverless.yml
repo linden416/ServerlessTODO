@@ -16,10 +16,10 @@ provider:
   region: ${opt:region, 'us-east-1'}
 
   environment:
-    TODOS_TABLE: TODOs-${self:provider.stage}
-    INDEX_NAME: TODOsIdIndex
     IMAGES_S3_BUCKET: serverless-todo-images-s3bucket-${self:provider.stage}
     SIGNED_URL_EXPIRATION: 300
+    TODOS_TABLE: TODOs-${self:provider.stage}
+    INDEX_NAME: TODOs-IX
 
 custom:
   webpack:
@@ -48,7 +48,6 @@ functions:
     iamRoleStatements:
       - Effect: Allow
         Action:
-          - dynamodb:Scan
           - dynamodb:Query
           - dynamodb:GetItem
         Resource: 
@@ -82,10 +81,11 @@ functions:
     iamRoleStatements:
       - Effect: Allow
         Action:
-          - dynamodb:Scan
+          - dynamodb:Query
           - dynamodb:UpdateItem
         Resource: 
           - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
+          - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}/index/${self:provider.environment.INDEX_NAME}
 
   # TODO: Configure this function
   DeleteTodo:
@@ -99,10 +99,11 @@ functions:
     iamRoleStatements:
       - Effect: Allow
         Action:
-          - dynamodb:Scan
+          - dynamodb:Query
           - dynamodb:DeleteItem
         Resource: 
           - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
+          - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}/index/${self:provider.environment.INDEX_NAME}
 
   # TODO: Configure this function
   GenerateUploadUrl:
@@ -116,10 +117,11 @@ functions:
     iamRoleStatements:
       - Effect: Allow
         Action:
-          - dynamodb:Scan
+          - dynamodb:Query
           - dynamodb:UpdateItem
         Resource: 
           - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}
+          - arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.TODOS_TABLE}/index/${self:provider.environment.INDEX_NAME}
       - Effect: Allow
         Action:
           - s3:PutObject
@@ -127,19 +129,18 @@ functions:
 
 resources:
   Resources:
-    # TODO: Add any necessary AWS resources
     TodosTable:
       Type: AWS::DynamoDB::Table
       Properties:
         AttributeDefinitions:
-          - AttributeName: todoId
+          - AttributeName: userId
             AttributeType: S
           - AttributeName: createdAt
             AttributeType: S
-          - AttributeName: dueDate
+          - AttributeName: todoId 
             AttributeType: S
         KeySchema:
-          - AttributeName: todoId
+          - AttributeName: userId
             KeyType: HASH
           - AttributeName: createdAt
             KeyType: RANGE
@@ -148,25 +149,17 @@ resources:
         LocalSecondaryIndexes:
           - IndexName: ${self:provider.environment.INDEX_NAME}
             KeySchema:
-              - AttributeName: todoId
+              - AttributeName: userId
                 KeyType: HASH
-              - AttributeName: dueDate
+              - AttributeName: todoId
                 KeyType: RANGE
             Projection:
               ProjectionType: ALL # What attributes will be copied to an index
 
     ImagesBucket:
       Type: AWS::S3::Bucket
-      # DependsOn: SNSTopicPolicy
       Properties:
         BucketName: ${self:provider.environment.IMAGES_S3_BUCKET}
-        # NotificationConfiguration:
-          # LambdaConfigurations:
-          # - Event: s3:ObjectCreated:*
-          #  Function: !GetAtt SendUploadNotificationsLambdaFunction.Arn
-          # TopicConfigurations:
-          #  - Event: s3:ObjectCreated:Put
-          #    Topic: !Ref ImagesTopic
         CorsConfiguration:
           CorsRules:
             -
